@@ -3,3 +3,12 @@ openai
 pandas
 numpy
 python-dotenv
+requests
+datetime
+google-api-python-client
+gensim
+matplotlib
+sklearn
+seaborn
+pytube
+bs4
