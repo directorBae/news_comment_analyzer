@@ -302,7 +302,6 @@ from gensim.models import KeyedVectors
 from khaiii import KhaiiiApi
 
 class analyzeModule(langchainModule, ClassifierSet, APIkeyImport):
-    morph_analyze = KhaiiiApi()
     def __init__(self):
         langchainModule.__init__(self)
         ClassifierSet.__init__(self)
@@ -316,6 +315,7 @@ class analyzeModule(langchainModule, ClassifierSet, APIkeyImport):
         return langchainModule.summarize_content(title, description, content)[1]
 
     def comments_processing(self, comments_list):
+        morph_analyze = KhaiiiApi()
         cate_to_int_dict = {'정치': 0, '인종': 1, '성별': 2, '외모': 3, '세대': 4, '기타': 5}
         processed_comments = []
 
